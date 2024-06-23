@@ -190,6 +190,24 @@
       (setq tdk_all2sof_selekcja nil)
     )
   )
+  
+  (setq tdk_all2sof_selekcja (ssget "X" (list (cons 62 7) (cons 8 "XR$6$Wand") (cons 6 "AUSGEZOGEN") (cons 370 13))))
+  (if (equal tdk_all2sof_selekcja nil)
+    (princ)
+    (progn  
+      (command "_chprop" tdk_all2sof_selekcja "" "_C" "1" "_LT" "SOF_ARBEITSFUGE" "_S" "0.0500" "_LW" "ByLayer" "_TR" "JakWarstwa" "_LA" "DK-ING_Arbeitsfuge" "")
+      (setq tdk_all2sof_selekcja nil)
+    )
+  )
+  
+  (setq tdk_all2sof_selekcja (ssget "X" (list (cons 62 7) (cons 8 "XR$6$Leerrohre") (cons 6 "AUSGEZOGEN") (cons 370 25))))
+  (if (equal tdk_all2sof_selekcja nil)
+    (princ)
+    (progn  
+      (command "_chprop" tdk_all2sof_selekcja "" "_C" "2" "_LT" "AUSGEZOGEN" "_S" "1.0000" "_LW" "ByLayer" "_TR" "JakWarstwa" "_LA" "DK-ING_Detail" "")
+      (setq tdk_all2sof_selekcja nil)
+    )
+  )
 
   (setq tdk_all2sof_selekcja (ssget "X" (list (cons 62 117) (cons 8 "XR$6$Fugen") (cons 6 "AUSGEZOGEN") (cons 370 18))))
     (if (equal tdk_all2sof_selekcja nil)
