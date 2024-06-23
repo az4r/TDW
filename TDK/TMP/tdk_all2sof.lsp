@@ -70,6 +70,15 @@
     )
   ) 
   
+  (setq tdk_all2sof_selekcja (ssget "X" (list (cons 62 8) (cons 8 "XR$6$Decke") (cons 6 "ALL_S23") (cons 370 18))))
+  (if (equal tdk_all2sof_selekcja nil)
+    (princ)
+    (progn
+      (command "_chprop" tdk_all2sof_selekcja "" "_C" "252" "_LT" "AUSGEZOGEN" "_S" "1.0000" "_LW" "0.18" "_TR" "0" "_LA" "DK-ING_Decke" "")
+      (setq tdk_all2sof_selekcja nil)
+    )
+  ) 
+  
   (setq tdk_all2sof_selekcja (ssget "X" (list (cons 62 8) (cons 8 "XR$6$Gruendung") (cons 6 "AUSGEZOGEN") (cons 370 18))))
   (if (equal tdk_all2sof_selekcja nil)
     (princ)
@@ -499,6 +508,6 @@
       (setq tdk_all2sof_selekcja nil)
     )
   )
-  
+
   (princ)
 )
