@@ -8,6 +8,8 @@
   (load "C:\\_PROJECTS\\TDK\\tdk_przetnij_w_punkcie.lsp")
   (load "C:\\_PROJECTS\\TDK\\tdk_rozklad.lsp")
   (load "C:\\_PROJECTS\\TDK\\tdk_szrafura_na_spod.lsp")
+  (load "C:\\_PROJECTS\\TDK\\tdk_rozstaw_pretow.lsp")
+  (load "C:\\_PROJECTS\\TDK\\tdk_dlugosc_rozkladu.lsp")
   (princ)
 )
 (tdk_start)

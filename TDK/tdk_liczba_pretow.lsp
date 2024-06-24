@@ -11,9 +11,19 @@
   (setq tdk_aktualna_liczba_pretow_rozstaw tdk_liczba_pretow_rozstaw)
   
   (setq tdk_liczba_pretow_odleglosc (* (distance tdk_liczba_pretow_p1 tdk_liczba_pretow_p2) 1000))
-  (setq tdk_liczba_pretow_wynik (rtos ((lambda ( tdk_liczba_pretow_licznik ) (cond ((equal 0.0 tdk_liczba_pretow_licznik 1e-8) (+ (/ tdk_liczba_pretow_odleglosc (atoi tdk_liczba_pretow_rozstaw)) 1)) ((< (+ (/ tdk_liczba_pretow_odleglosc (atoi tdk_liczba_pretow_rozstaw)) 1) 0) (- (+ (/ tdk_liczba_pretow_odleglosc (atoi tdk_liczba_pretow_rozstaw)) 1) tdk_liczba_pretow_licznik)) ((+ (+ (/ tdk_liczba_pretow_odleglosc (atoi tdk_liczba_pretow_rozstaw)) 1) (- 1 tdk_liczba_pretow_licznik))))) (rem (+ (/ tdk_liczba_pretow_odleglosc (atoi tdk_liczba_pretow_rozstaw)) 1) 1)) 2 0))
-  (setq tdk_liczba_pretow_dlugosc_rozkladu (rtos (/ (*(- (atof tdk_liczba_pretow_wynik) 1) (atof tdk_liczba_pretow_rozstaw)) 1000) 2 4))
-  (princ (strcat "Liczba pretow w rozkladzie wynosi: " tdk_liczba_pretow_wynik "\nWymagana dlugosc rozkladu dla tej liczby pretow wynosi: " tdk_liczba_pretow_dlugosc_rozkladu "m"))
-  (alert (strcat "Liczba pretow w rozkladzie wynosi: " tdk_liczba_pretow_wynik "\nWymagana dlugosc rozkladu dla tej liczby pretow wynosi: " tdk_liczba_pretow_dlugosc_rozkladu "m"))
+  (if (equal (rtos 1) (rtos (- (/ tdk_liczba_pretow_odleglosc (atof tdk_liczba_pretow_rozstaw)) (fix (/ tdk_liczba_pretow_odleglosc (atof tdk_liczba_pretow_rozstaw))))))
+    (progn
+    (setq tdk_liczba_pretow_wynik (/ tdk_liczba_pretow_odleglosc (atof tdk_liczba_pretow_rozstaw)))
+    (setq tdk_liczba_pretow_wynik_korekta 1)
+    (setq tdk_liczba_pretow_wynik (+ tdk_liczba_pretow_wynik 1))
+    )
+    (progn
+    (setq tdk_liczba_pretow_wynik (fix (1+ (/ tdk_liczba_pretow_odleglosc (atof tdk_liczba_pretow_rozstaw)))))
+    (setq tdk_liczba_pretow_wynik_korekta 1)
+    )
+  )
+  (setq tdk_liczba_pretow_dlugosc_rozkladu (/ (* (- tdk_liczba_pretow_wynik tdk_liczba_pretow_wynik_korekta) (atof tdk_liczba_pretow_rozstaw)) 1000))
+  (princ (strcat "Liczba pretow w rozkladzie wynosi: " (rtos tdk_liczba_pretow_wynik 2 0) "\nWymagana dlugosc rozkladu dla tej liczby pretow wynosi: " (rtos tdk_liczba_pretow_dlugosc_rozkladu 2 4) "m"))
+  (alert (strcat "Liczba pretow w rozkladzie wynosi: " (rtos tdk_liczba_pretow_wynik 2 0) "\nWymagana dlugosc rozkladu dla tej liczby pretow wynosi: " (rtos tdk_liczba_pretow_dlugosc_rozkladu 2 4) "m"))
   (princ)
 )
