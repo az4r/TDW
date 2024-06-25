@@ -10,6 +10,7 @@
   (load "C:\\_PROJECTS\\TDK\\tdk_szrafura_na_spod.lsp")
   (load "C:\\_PROJECTS\\TDK\\tdk_rozstaw_pretow.lsp")
   (load "C:\\_PROJECTS\\TDK\\tdk_dlugosc_rozkladu.lsp")
+  (load "C:\\_PROJECTS\\TDK\\tdk_wylacz_szrafure.lsp")
   (princ)
 )
 (tdk_start)

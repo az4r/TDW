@@ -17,7 +17,16 @@
     (setq tdk_podzial_rozkladu_rozklad (car (entsel "Wskaz rozklad: ")))
   )
   (setq tdk_podzial_rozkladu_rozklad (entget tdk_podzial_rozkladu_rozklad))
-  (setq tdk_podzial_rozkladu_rozstaw_pretow (/ (getreal "Podaj rozstaw pretow (mm): ") 1000))
+  
+  
+  (setq tdk_podzial_rozkladu_rozstaw_pretow "")  
+  (setq tdk_podzial_rozkladu_rozstaw_pretow (getstring "\nPodaj rozstaw pretow (mm): "))
+  (while (equal tdk_podzial_rozkladu_rozstaw_pretow "")
+    (setq tdk_podzial_rozkladu_rozstaw_pretow (getstring "\nPodaj rozstaw pretow (mm): "))
+  )
+  (setq tdk_podzial_rozkladu_rozstaw_pretow (/ (atof tdk_podzial_rozkladu_rozstaw_pretow) 1000))
+         
+         
   (setq tdk_podzial_rozkladu_p1 (list (cadr (assoc 13 tdk_podzial_rozkladu_rozklad)) (caddr (assoc 13 tdk_podzial_rozkladu_rozklad)) (cadddr (assoc 13 tdk_podzial_rozkladu_rozklad))))
   (setq tdk_podzial_rozkladu_p2 (list (cadr (assoc 14 tdk_podzial_rozkladu_rozklad)) (caddr (assoc 14 tdk_podzial_rozkladu_rozklad)) (cadddr (assoc 14 tdk_podzial_rozkladu_rozklad))))
   (setq tdk_podzial_rozkladu_p3 (getpoint "Wskaz punkt przeciecia rozkladu: "))
