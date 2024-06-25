@@ -23,7 +23,7 @@
   (if (> tdk_dlugosc_preta_rzeczywista_dl_preta 12000)
      (setq tdk_dlugosc_preta_zbrojeniowego "12000")
      (progn
-     (setq tdk_dlugosc_preta_zbrojeniowego (rtos (* 5 (fix (+ (/ (-(-(* (distance tdk_dlugosc_preta_p1 tdk_dlugosc_preta_p2) 1000) (atoi tdk_dlugosc_preta_otulina1))(atoi tdk_dlugosc_preta_otulina2)) 5) 0.0001))) 2 0))
+     (setq tdk_dlugosc_preta_zbrojeniowego (rtos (* 50 (fix (+ (/ (-(-(* (distance tdk_dlugosc_preta_p1 tdk_dlugosc_preta_p2) 1000) (atoi tdk_dlugosc_preta_otulina1))(atoi tdk_dlugosc_preta_otulina2)) 50) 0.0001))) 2 0))
      (setq tdk_dlugosc_preta_zbrojeniowego (/ (atof tdk_dlugosc_preta_zbrojeniowego) 1000))
      (setq tdk_dlugosc_preta_zbrojeniowego (rtos tdk_dlugosc_preta_zbrojeniowego 2 4))
      )
