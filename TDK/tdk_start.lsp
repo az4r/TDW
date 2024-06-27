@@ -11,6 +11,7 @@
   (load "C:\\_PROJECTS\\TDK\\tdk_rozstaw_pretow.lsp")
   (load "C:\\_PROJECTS\\TDK\\tdk_dlugosc_rozkladu.lsp")
   (load "C:\\_PROJECTS\\TDK\\tdk_wylacz_szrafure.lsp")
+  (load "C:\\_PROJECTS\\TDK\\tdk_wyrownaj.lsp")
   (princ)
 )
 (tdk_start)
