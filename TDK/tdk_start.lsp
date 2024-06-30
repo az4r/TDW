@@ -12,6 +12,7 @@
   (load "C:\\_PROJECTS\\TDK\\tdk_dlugosc_rozkladu.lsp")
   (load "C:\\_PROJECTS\\TDK\\tdk_wylacz_szrafure.lsp")
   (load "C:\\_PROJECTS\\TDK\\tdk_wyrownaj.lsp")
+  (load "C:\\_PROJECTS\\TDK\\tdk_wczytaj_warstwy.lsp")
   (princ)
 )
 (tdk_start)

@@ -92,7 +92,7 @@
   (if (equal tdk_all2sof_selekcja nil)
     (princ)
     (progn  
-      (command "_chprop" tdk_all2sof_selekcja "" "_C" "ByLayer" "_LT" "DASHED" "_S" "0.2500" "_LW" "ByLayer" "_LA" "DK-ING_Detail" "")
+      (command "_chprop" tdk_all2sof_selekcja "" "_C" "ByLayer" "_LT" "KRESKOWA" "_S" "0.2500" "_LW" "ByLayer" "_LA" "DK-ING_Detail" "")
       (setq tdk_all2sof_selekcja nil)
     )
   )
@@ -110,7 +110,7 @@
   (if (equal tdk_all2sof_selekcja nil)
     (princ)
     (progn  
-      (command "_chprop" tdk_all2sof_selekcja "" "_C" "252" "_LT" "DASHED" "_S" "0.1000" "_LW" "0.13" "_TR" "JakWarstwa" "_LA" "DK-ING_Detail" "")
+      (command "_chprop" tdk_all2sof_selekcja "" "_C" "252" "_LT" "KRESKOWA" "_S" "0.1000" "_LW" "0.13" "_TR" "JakWarstwa" "_LA" "DK-ING_Detail" "")
       (setq tdk_all2sof_selekcja nil)
     )
   )
@@ -299,7 +299,7 @@
   (if (equal tdk_all2sof_selekcja nil)
     (princ)
     (progn  
-      (command "_chprop" tdk_all2sof_selekcja "" "_C" "252" "_LT" "DASHED" "_S" "0.2500" "_LW" "ByLayer" "_TR" "JakWarstwa" "_LA" "DK-ING_Bohrpfahl" "")
+      (command "_chprop" tdk_all2sof_selekcja "" "_C" "252" "_LT" "KRESKOWA" "_S" "0.2500" "_LW" "ByLayer" "_TR" "JakWarstwa" "_LA" "DK-ING_Bohrpfahl" "")
       (setq tdk_all2sof_selekcja nil)
     )
   )
@@ -308,7 +308,7 @@
   (if (equal tdk_all2sof_selekcja nil)
     (princ)
     (progn  
-      (command "_chprop" tdk_all2sof_selekcja "" "_C" "252" "_LT" "DASHED" "_S" "0.2500" "_LW" "ByLayer" "_TR" "JakWarstwa" "_LA" "DK-ING_Bohrpfahl" "")
+      (command "_chprop" tdk_all2sof_selekcja "" "_C" "252" "_LT" "KRESKOWA" "_S" "0.2500" "_LW" "ByLayer" "_TR" "JakWarstwa" "_LA" "DK-ING_Bohrpfahl" "")
       (setq tdk_all2sof_selekcja nil)
     )
   )
@@ -317,14 +317,14 @@
   (if (equal tdk_all2sof_selekcja nil)
     (princ)
     (progn  
-      (command "_chprop" tdk_all2sof_selekcja "" "_C" "252" "_LT" "DASHED" "_S" "0.2500" "_LW" "0.13" "_TR" "JakWarstwa" "_LA" "DK-ING_Bohrpfahl" "")
+      (command "_chprop" tdk_all2sof_selekcja "" "_C" "252" "_LT" "KRESKOWA" "_S" "0.2500" "_LW" "0.13" "_TR" "JakWarstwa" "_LA" "DK-ING_Bohrpfahl" "")
       (setq tdk_all2sof_selekcja nil)
     )
   )
   
   ;########## HATCH'E ##########
   
-  ;(setq tdk_all2sof_selekcja (ssget "X" (list (cons 62 254) (cons 8 "XR$6$Füllfläche") (cons 6 "AUSGEZOGEN") (cons 370 35))))
+  ;(setq tdk_all2sof_selekcja (ssget "X" (list (cons 62 254) (cons 8 "XR$6$Fï¿½llflï¿½che") (cons 6 "AUSGEZOGEN") (cons 370 35))))
   ;(if (equal tdk_all2sof_selekcja nil)
     ;(princ)
     ;(progn  
@@ -437,7 +437,7 @@
     )
   )
   
-  (setq tdk_all2sof_selekcja (ssget "X" (list (cons 62 117) (cons 8 "XR$6$Füllfläche") (cons 6 "AUSGEZOGEN") (cons 370 13))))
+  (setq tdk_all2sof_selekcja (ssget "X" (list (cons 62 117) (cons 8 "XR$6$Fï¿½llflï¿½che") (cons 6 "AUSGEZOGEN") (cons 370 13))))
     (if (equal tdk_all2sof_selekcja nil)
     (princ)
     (progn  
@@ -491,7 +491,7 @@
     )
   )
   
-  (setq tdk_all2sof_selekcja (ssget "X" (list (cons 62 117) (cons 8 "XR$4$Füllfläche") (cons 6 "AUSGEZOGEN") (cons 370 13))))
+  (setq tdk_all2sof_selekcja (ssget "X" (list (cons 62 117) (cons 8 "XR$4$Fï¿½llflï¿½che") (cons 6 "AUSGEZOGEN") (cons 370 13))))
   (if (equal tdk_all2sof_selekcja nil)
     (princ)
     (progn  
