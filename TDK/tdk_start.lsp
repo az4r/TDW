@@ -13,6 +13,7 @@
   (load "C:\\_PROJECTS\\TDK\\tdk_wylacz_szrafure.lsp")
   (load "C:\\_PROJECTS\\TDK\\tdk_wyrownaj.lsp")
   (load "C:\\_PROJECTS\\TDK\\tdk_wczytaj_warstwy.lsp")
+  (load "C:\\_PROJECTS\\TDK\\tdk_szare_linie_na_spod.lsp")
   (princ)
 )
 (tdk_start)
