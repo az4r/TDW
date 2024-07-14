@@ -32,7 +32,8 @@
     (setq tdk_prosta_i_splajn_koniec_rozstawu tdk_prosta_i_splajn_ob2_pk)
   )
   (setq tdk_prosta_i_splajn_dlugosc_obszaru (abs (- (car tdk_prosta_i_splajn_poczatek_rozstawu) (car tdk_prosta_i_splajn_koniec_rozstawu))))
-  (setq tdk_prosta_i_splajn_liczba_rozstawow (fix (/ tdk_prosta_i_splajn_dlugosc_obszaru tdk_prosta_i_splajn_rozstaw)))
+  (setq tdk_prosta_i_splajn_liczba_rozstawow (1+ (fix (/ tdk_prosta_i_splajn_dlugosc_obszaru tdk_prosta_i_splajn_rozstaw))))
+  (repeat tdk_prosta_i_splajn_liczba_rozstawow
   (command "_zoom" "_scale" "10000X")
   (command "_xline" tdk_prosta_i_splajn_poczatek_rozstawu (polar tdk_prosta_i_splajn_poczatek_rozstawu (/ PI 2) 200) "")
   (setq tdk_prosta_i_splajn_ob3 (entlast))
@@ -45,5 +46,7 @@
   (command "_pline" tdk_prosta_i_splajn_punkt_przeciecia1 tdk_prosta_i_splajn_punkt_przeciecia2 "")
   (setq tdk_prosta_i_splajn_odleglosc (distance tdk_prosta_i_splajn_punkt_przeciecia1 tdk_prosta_i_splajn_punkt_przeciecia2))
   (command "_zoom" "_scale" "0.0001X")
+  (setq tdk_prosta_i_splajn_poczatek_rozstawu (subst (+ (car tdk_prosta_i_splajn_poczatek_rozstawu) tdk_prosta_i_splajn_rozstaw) (car tdk_prosta_i_splajn_poczatek_rozstawu) tdk_prosta_i_splajn_poczatek_rozstawu))
+  )
   (princ)
 )
